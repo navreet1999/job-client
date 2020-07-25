@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import './login.css';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+const { LOGIN_URL } = require('./urls');
 class LogIn extends Component {
     constructor(props) {
         super(props);
@@ -54,7 +55,7 @@ class LogIn extends Component {
         }
         console.log(JSON.stringify(user));
 
-        fetch('http://localhost:7000/users/login', {
+        fetch(LOGIN_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Redirect } from "react-router-dom";
 import "./login.css";
 import {Link} from 'react-router-dom';
+const { SIGNUP_URL } = require('./urls');
 class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -117,7 +118,7 @@ class SignUp extends Component {
     so the setState is Asynchronous */
     this.setState({ usersadd: { ...this.state.usersadd, name: this.name } })
     setTimeout(() => {
-        fetch('http://localhost:7000/users/add', {
+        fetch(SIGNUP_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
