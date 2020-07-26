@@ -1,5 +1,6 @@
-const API_URL = process.env.API_URL || "http://localhost:5000"
+const API_URL = 'https://api-search-job.herokuapp.com';
+console.log(API_URL);
 module.exports = {
-    LOGIN_URL = API_URL + '/users/login',
-    SIGNUP_URL = API_URL + '/users/add'
+    LOGIN_URL : API_URL + '/users/login',
+    SIGNUP_URL : API_URL + '/users/add'
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './login.css';
 import { Redirect } from 'react-router-dom';
 const { LOGIN_URL } = require('./urls');
+console.log(LOGIN_URL);
 class LogIn extends Component {
     constructor(props) {
         super(props);
